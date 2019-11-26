@@ -23,9 +23,9 @@ def checkvalley(lst):
 	return v
 	
 	
-inp=input(" Enter the trail -")
-inp_lst=inp.replace("[","").replace("]","").split(",")
-int_lst=decode_lst(inp_lst)
+# inp=input(" Enter the trail -")
+# inp_lst=inp.replace("[","").replace("]","").split(",")
+int_lst=decode_lst(list("UDDDUDUU"))
 print(checkvalley(int_lst))
 
 
