@@ -16,15 +16,15 @@ class MinBribe:
         moved=0
         diff=0
         swap=False
-        for i in range(1,self.n+1):
-            diff=q[i-1]-i
-            if diff >0:
-                # s=s+diff
-                if diff>2:
-                    return 'Too chaotic'
+        # for i in range(1,self.n+1):
+            # diff=q[i-1]-i
+            # if diff >0:
+            #     # s=s+diff
+            #     if diff>2:
+            #         return 'Too chaotic'
 
         for i in range(self.n):
-            # diff=self.arr[i]-i+1
+            diff=self.arr[i]-(i+1)
             # if diff>2:
             #     return 'Too chaotic'
             if diff >0:
