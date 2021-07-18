@@ -9,12 +9,13 @@ class LinkedList:
         self.head=None
 
     def insert(self,data):
-        n=Node(data)
+        n=DoubleNode(data)
         current=self.head
         if current:
             while current.next:
                 current=current.next
             current.next=n
+            n.previous=current
         else:
             self.head=n 
 
@@ -26,6 +27,7 @@ class LinkedList:
                 print("Deleting {}".format(current.data))
                 if previous:
                     previous.next=current.next
+                    current.next.previous=previous
                 break
             previous=current
             current=current.next
@@ -35,6 +37,10 @@ class LinkedList:
             print("Data {}".format(current.data))
             current=current.next
 
+class DoubleNode(Node):
+    def __init__(self, data):
+        super().__init__(data)
+        self.previous=None
 
 if __name__=='__main__':
     l=LinkedList()
