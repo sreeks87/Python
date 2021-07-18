@@ -23,15 +23,43 @@ class Node:
                         self.right.insert(d)      
             else:
                 self.data=d
-
-
+    def inOrder(self,vals):
+        if self.left is not None:
+            self.left.inOrder(vals)
+        if self.data is not None:
+            vals.append(self.data)
+        if self.right is not None:
+            self.right.inOrder(vals)
+        print(vals)
+    def preOrder(self,vals):
+        if self.data is not None:
+            vals.append(self.data)
+        if self.left is not None:
+            self.left.preOrder(vals)
+        if self.right is not None:
+            self.right.preOrder(vals)
+        print(vals)
+    def postOrder(self,vals):
+        if self.left is not None:
+            self.left.postOrder(vals)
+        if self.right is not None:
+            self.right.postOrder(vals)
+        if self.data is not None:
+            vals.append(self.data)
+        print(vals)
 if __name__=='__main__':
-    r=Node()
-    r.insert(12)
+    r=Node(12)
     r.insert(6)
     r.insert(14)
     r.insert(3)
     r.printTree()
+    print("---------ordering-------------")
+    r.inOrder([])
+    print("---------------------")
+    r.preOrder([])
+    print("----------------------")
+    r.postOrder([])
+    print("-------------------")
 
 
 
