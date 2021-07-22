@@ -39,7 +39,7 @@ def kadenes(a):
     return maxsofar
 
 import time
-array=[i for i in range(1,100000)]
+array=[i for i in range(1,10000)]
 # print(array)
 
 start_time = time.time()            
