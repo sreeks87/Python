@@ -1,7 +1,8 @@
 class Solution:
     def knapsack(self,wt_array,pt_array,wt_bag,n):
         #  base condition
-        mem=[[-1]*wt_bag]*n 
+        # mem=[[-1]*wt_bag]*n 
+        mem=[[-1 for i in range(0,wt_bag)] for j in range(0,n)] 
         if wt_bag ==0 or n==0:
             return 0
         # lookup, if the SP was already computed or not if yes , return.

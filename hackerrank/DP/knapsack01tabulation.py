@@ -1,7 +1,8 @@
 class Solution:
     def knapsack(self,wt_array,pt_array,wt_bag,n):
         #  base condition
-        dp=[[0]*wt_bag]*n 
+        # dp=[[0]*wt_bag]*n 
+        dp=[[None for i in range(0,wt_bag)] for j in range(0,n)] 
         for i in range(0,n):
             for j in range(0,wt_bag):
                 if i==0 or j==0:
