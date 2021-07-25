@@ -1,3 +1,4 @@
+# Count of subsets with sum equal to X.
 class Solution:
     def countRecursive(self,array,s,n):
         if s==0:
@@ -27,7 +28,7 @@ class Solution:
                     dp[i][j]=dp[i-1][j] + dp[i-1][j-array[i-1]]
         return dp[i][j]
 s= Solution()
-a=[3,1,3,2]
+a=[3,1,2,3]
 print(s.countRecursive(a,6,len(a)))
 
 print(s.dpmethod(a,6,len(a)))

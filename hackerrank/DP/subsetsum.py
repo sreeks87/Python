@@ -1,5 +1,5 @@
 # subsetsum.py
-
+# is there a subset possible with a set that returns a given sum
 class Solution:
     def backTrackingRecusrsion(self,array,sum,n):
         # we reduced the sum in every step while including an element, so finally the sum ==0 means, we have found the elements that can make up sum

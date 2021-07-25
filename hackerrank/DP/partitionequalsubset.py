@@ -1,7 +1,8 @@
 # subsetsum.py
+# Partition problem is to determine whether a given set can be partitioned into two subsets such that the sum of elements in both subsets is the same. 
+
 from typing import List
 class Solution:
-
     def canPartition(self, nums: List[int]) -> bool:
         n=len(nums)
         s=sum(nums)

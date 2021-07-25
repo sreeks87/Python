@@ -1,6 +1,6 @@
 # minumum subst sum difference
+# Given a set of integers, the task is to divide it into two sets S1 and S2 such that the absolute difference between their sums is minimum.
 import math
-from abc import abstractproperty
 
 
 class Solution:
@@ -14,7 +14,7 @@ class Solution:
         for i in range(0,s+1):
             if resarray[n][i]:
                 d2=sa-2*i
-                if d2<d:
+                if d2<=d:
                     d=d2
         print("The minimum difference is {}".format(d))
     
