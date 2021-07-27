@@ -11,7 +11,7 @@ def rotate(matrix):
 			matrix[i][j],matrix[j][i]=matrix[j][i],matrix[i][j]
 	i=0
 	h=(n-1)//2
-	while i<h:
+	while i<=h:
 		print(matrix[i])
 		print(matrix[n-1-i])
 		matrix[i],matrix[n-1-i]=matrix[n-1-i],matrix[i]
