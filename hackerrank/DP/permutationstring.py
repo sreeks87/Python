@@ -15,7 +15,6 @@ class Solution:
             self.anotherpermutation(a[0:i]+a[i+1:],ret+a[i])
 
     def subsets(self,a):
-        
         for i in range(len(a)+1):
             for j in range(i,len(a)+1):
                 print(a[i:j])

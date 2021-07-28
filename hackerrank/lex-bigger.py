@@ -5,29 +5,29 @@ import os
 import random
 import re
 import sys
-from itertools import permutations
 #
 # Complete the 'biggerIsGreater' function below.
 #
 # The function is expected to return a STRING.
 # The function accepts STRING w as parameter.
 #
-
+def anotherpermutation(a,ret,l):
+    if len(a)==0:
+        l.append(ret)
+    for i in range(0,len(a)):
+        anotherpermutation(a[0:i]+a[i+1:],ret+a[i],l)
+    return l
 def biggerIsGreater(w):
     # Write your code here
-    p=permutations(w)
-    c=0
-    for i in p:
-        big=''.join(i)
-        c+=1
-        # if(c==2):
-        print('big =='+big)
-        if big > w:
-            return big
-        else:
-            return "no answer"
+    m=''    
+    l=[]
+    anotherpermutation(w,m,l)
+    for i in sorted(l):
+        if i>w:
+            return i
+    return "no answer"
 
-    
+        
 if __name__ == '__main__':
     # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
