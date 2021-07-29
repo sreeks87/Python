@@ -1,4 +1,5 @@
 from typing import List
+# Product of array excluding self
 class Solution:
     loop=0
     def productExceptSelfWorst(self, nums: List[int]) -> List[int]:
