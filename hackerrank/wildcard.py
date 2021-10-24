@@ -5,7 +5,7 @@ def WildcardCharacters(str):
     charStr = list(strArr[1])
   
     arr = list(specChar)
-    letters = "/^[A-Za-z]+$/"
+    regexp = "/^[A-Za-z]+$/"
     i = 0
     while(i< len(arr)):
         if(arr[i] == '+'):
