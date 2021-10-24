@@ -1,19 +1,19 @@
 def WildcardCharacters(str):
     import re
-    strArr= str.split(' ')
-    specChar = strArr[0]
-    charStr = list(strArr[1])
+    inpArr= str.split(' ')
+    pattern = inpArr[0]
+    stringArr = list(inpArr[1])
   
-    arr = list(specChar)
+    arr = list(pattern)
     regexp = "/^[A-Za-z]+$/"
     i = 0
     while(i< len(arr)):
         if(arr[i] == '+'):
-            if not re.match(charStr[0],letters):
+            if not re.match(stringArr[0],regexp):
                 return "false"
-                charStr = charStr[1:charStr.length]
+            stringArr = stringArr[1:stringArr.length]
         elif arr[i] == '*':
-            curr = charStr[0]
+            curr = stringArr[0]
             j = 1
             k = 0
             if len(arr)>i+1 and arr[i+1] == '{':
@@ -23,14 +23,14 @@ def WildcardCharacters(str):
                 k = 3
                 i+=1
             while(j < k):
-                charStr = charStr.slice(1,charStr.length)
-                if charStr[0] != curr: 
+                stringArr = stringArr[1:stringArr.length]
+                if stringArr[0] != curr: 
                     return "false"
                 j+=1
-            charStr = charStr.slice(1,charStr.length)
+            stringArr = stringArr[1:stringArr.length]
             continue
         i+=1
-        if charStr.length != 0:
+        if stringArr.length != 0:
             return 'false'
         return "true" 
 
